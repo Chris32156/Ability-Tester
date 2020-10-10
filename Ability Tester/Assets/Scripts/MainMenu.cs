@@ -4,15 +4,28 @@ using UnityEngine;
 
 public class MainMenu : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    //Params
+    [SerializeField] string Game;
+
+    SceneManagement scene;
+
+    private void Start()
     {
-        
+        scene = FindObjectOfType<SceneManagement>();
     }
 
-    // Update is called once per frame
-    void Update()
+    public void BackButton()
     {
-        
+        scene.LoadScene("Menu");
+    }
+
+    public void TargetTest()
+    {
+        scene.LoadScene("Target Test");
+    }
+
+    public void ResetHighScore()
+    {
+        PlayerPrefs.DeleteAll();
     }
 }
