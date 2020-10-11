@@ -26,7 +26,7 @@ public class ClickTest : MonoBehaviour
     {
         StartingSeconds = Seconds;
 
-        HighScoreText.SetText("High Score " + PlayerPrefs.GetFloat("Click Test High Score") + " Clicks Per Second");
+        HighScoreText.SetText("High Score " + PlayerPrefs.GetFloat("Click Test High Score").ToString("F1") + " Clicks Per Second");
         TimerText.SetText(StartingSeconds.ToString());
     }
 
