@@ -24,8 +24,29 @@ public class MainMenu : MonoBehaviour
         scene.LoadScene("Target Test");
     }
 
+    public void ClickTest()
+    {
+        scene.LoadScene("Click Test");
+    }
+
+    public void ChimpTest()
+    {
+        scene.LoadScene("Chimp Test");
+    }
+
+    public void VisionTest()
+    {
+        scene.LoadScene("Vision Test");
+    }
+
+    public void MemoryTest()
+    {
+        scene.LoadScene("Memory Test");
+    }
+
     public void ResetHighScore()
     {
         PlayerPrefs.DeleteAll();
+        PlayerPrefs.Save();
     }
 }

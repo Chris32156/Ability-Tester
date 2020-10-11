@@ -14,7 +14,6 @@ public class TargetTest : MonoBehaviour
 
     int StartingNumberOfTargets;
     float timeStarted;
-    float timeLeft;
     Target target;
     // Start is called before the first frame update
     void Start()
@@ -24,12 +23,9 @@ public class TargetTest : MonoBehaviour
         TargetText.SetText(StartingNumberOfTargets.ToString());
     }
 
-    private void Update()
-    {
-    }
-
     public void StartGame()
     {
+        NumberOfTargets = StartingNumberOfTargets;
         timeStarted = Time.time;
         GameCanvas.SetActive(true);
         GameOverCanvas.SetActive(false);
@@ -58,6 +54,7 @@ public class TargetTest : MonoBehaviour
         if (score < PlayerPrefs.GetInt("Target Test High Score", 0) || PlayerPrefs.GetInt("Target Test High Score", 0) == 0)
         {
             PlayerPrefs.SetInt("Target Test High Score", score);
+            NewRecordText.SetText("New Record!");
         }
         else
         {
