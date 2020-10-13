@@ -359,7 +359,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 94643775}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7410805150181511390}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: NumberTest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!222 &94643774
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1506,7 +1518,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 21300000, guid: 95ba4337fb717bd439143946b0eb3943, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 06c12b9baa7590f48b682e288d8a962a, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -1709,7 +1721,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1022565700}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7410805150181511390}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: VisionTest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1022565700
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2050,7 +2074,7 @@ GameObject:
   - component: {fileID: 1144016253}
   - component: {fileID: 1144016252}
   m_Layer: 5
-  m_Name: Chimp Test
+  m_Name: Reflex Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2138,7 +2162,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1144016254}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 7410805150181511390}
+        m_TargetAssemblyTypeName: MainMenu, Assembly-CSharp
+        m_MethodName: ReflexTest
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1144016254
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2703,7 +2739,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Chimp Test
+  m_text: 'Reflex Test
+
+'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 29b21923165791a4299476fa40f6d91f, type: 2}
   m_sharedMaterial: {fileID: -8173176464192590401, guid: 29b21923165791a4299476fa40f6d91f, type: 2}

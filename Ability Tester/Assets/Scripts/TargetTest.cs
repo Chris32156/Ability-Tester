@@ -26,6 +26,7 @@ public class TargetTest : MonoBehaviour
     public void StartGame()
     {
         NumberOfTargets = StartingNumberOfTargets;
+        TargetText.SetText(StartingNumberOfTargets.ToString());
         timeStarted = Time.time;
         GameCanvas.SetActive(true);
         GameOverCanvas.SetActive(false);

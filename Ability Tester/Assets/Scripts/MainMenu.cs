@@ -7,6 +7,7 @@ public class MainMenu : MonoBehaviour
     //Params
     [SerializeField] string Game;
 
+    //Declare vars
     SceneManagement scene;
 
     private void Start()
@@ -29,9 +30,9 @@ public class MainMenu : MonoBehaviour
         scene.LoadScene("Click Test");
     }
 
-    public void ChimpTest()
+    public void ReflexTest()
     {
-        scene.LoadScene("Chimp Test");
+        scene.LoadScene("Reflex Test");
     }
 
     public void VisionTest()
@@ -39,9 +40,9 @@ public class MainMenu : MonoBehaviour
         scene.LoadScene("Vision Test");
     }
 
-    public void MemoryTest()
+    public void NumberTest()
     {
-        scene.LoadScene("Memory Test");
+        scene.LoadScene("Number Test");
     }
 
     public void ResetHighScore()
