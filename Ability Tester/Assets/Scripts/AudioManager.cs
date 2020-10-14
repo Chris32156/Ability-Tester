@@ -4,6 +4,14 @@ using UnityEngine;
 
 public class AudioManager : MonoBehaviour
 {
+    //Params
+    [SerializeField] AudioClip button;
+    [SerializeField] AudioClip good;
+    [SerializeField] AudioClip bad;
+
+    //Declare Vars
+    AudioSource audio;
+
     private void Awake()
     {
         var objs = FindObjectsOfType<AudioManager>();
@@ -20,8 +28,37 @@ public class AudioManager : MonoBehaviour
         }
     }
 
+    private void Start()
+    {
+        audio = GetComponent<AudioSource>();
+    }
+
+    public void MuteButtonPress()
+    {
+        audio.PlayOneShot(button);
+    }
+
     public void ButtonPress()
     {
+        if (PlayerPrefs.GetInt("Muted", 0) == 0)
+        {
+            audio.PlayOneShot(button);
+        }
+    }
 
+    public void Success()
+    {
+        if (PlayerPrefs.GetInt("Muted", 0) == 0)
+        {
+            audio.PlayOneShot(good);
+        }
+    }
+
+    public void Failure()
+    {
+        if (PlayerPrefs.GetInt("Muted", 0) == 0)
+        {
+            audio.PlayOneShot(bad);
+        }
     }
 }

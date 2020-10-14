@@ -24,10 +24,13 @@ public class ReflexTest : MonoBehaviour
     int score;
     bool GameInPlay = false;
     bool ReflexStarted;
-    
+    AudioManager audio;
+
     // Start is called before the first frame update
     void Start()
     {
+        audio = FindObjectOfType<AudioManager>();
+
         //Update UI
         HighScoreText.SetText("High Score " + PlayerPrefs.GetInt("Reflex Test High Score").ToString() + "ms");
     }
@@ -50,6 +53,8 @@ public class ReflexTest : MonoBehaviour
             //Player reflex
             if(Input.GetMouseButtonDown(0) && ReflexStarted)
             {
+                audio.Success();
+
                 //Get Score
                 float a = Time.time - ReflexTime;
                 Debug.Log(a);
@@ -57,11 +62,17 @@ public class ReflexTest : MonoBehaviour
 
                 gameOver();
             }
+            if (Input.GetMouseButtonDown(0) && !ReflexStarted)
+            {
+                audio.Failure();
+            }
         }
     }
 
     public void StartGame()
     {
+        audio.ButtonPress();
+
         //Initalize variables
         timeStarted = Time.time;
         ReflexStarted = false;

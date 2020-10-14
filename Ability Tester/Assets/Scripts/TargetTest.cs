@@ -17,10 +17,13 @@ public class TargetTest : MonoBehaviour
     int StartingNumberOfTargets;
     float timeStarted;
     Target target;
+    AudioManager audio;
 
     // Start is called before the first frame update
     void Start()
     {
+        audio = FindObjectOfType<AudioManager>();
+
         StartingNumberOfTargets = NumberOfTargets;
 
         //Update UI
@@ -29,6 +32,8 @@ public class TargetTest : MonoBehaviour
 
     public void StartGame()
     {
+        audio.ButtonPress();
+
         //Initilize Variables
         NumberOfTargets = StartingNumberOfTargets;
         TargetText.SetText(StartingNumberOfTargets.ToString());
@@ -41,6 +46,8 @@ public class TargetTest : MonoBehaviour
 
     public void TargetHit()
     {
+        audio.Success();
+
         //Subtract one target
         NumberOfTargets--;
 

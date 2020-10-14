@@ -21,10 +21,13 @@ public class VisionTest : MonoBehaviour
     int Score = 0;
     string Answer;
     float StartingFontSize;
+    AudioManager audio;
 
     // Start is called before the first frame update
     void Start()
     {
+        audio = FindObjectOfType<AudioManager>();
+
         //Set high score text
         HighScoreText.SetText("High Score " + PlayerPrefs.GetInt("Vision Test High Score").ToString() + " Letters Correct");
 
@@ -42,6 +45,8 @@ public class VisionTest : MonoBehaviour
 
     public void StartGame()
     {
+        audio.ButtonPress();
+
         //Reset score
         Score = 0;
 
@@ -159,6 +164,8 @@ public class VisionTest : MonoBehaviour
         //Compare Ans
         if (input.Contains(Answer))
         {
+            audio.Success();
+
             SetLetter();
 
             //Update Letter size
@@ -171,6 +178,8 @@ public class VisionTest : MonoBehaviour
         else
         {
             //If Wrong
+            audio.Failure();
+
             gameOver();
         }
     }

@@ -41,7 +41,7 @@ public class MuteButton : MonoBehaviour
     public void ToggleMute()
     {
         //Play noise
-        audio.ButtonPress();
+        audio.MuteButtonPress();
 
         //Toggles Muted 0 means Unmuted, 1 means muted
         if (PlayerPrefs.GetInt("Muted", 0) == 0)

@@ -21,10 +21,13 @@ public class ClickTest : MonoBehaviour
     float timeStarted;
     bool GameInPlay = false;
     int Clicks = 0;
+    AudioManager audio;
 
     // Start is called before the first frame update
     void Start()
     {
+        audio = FindObjectOfType<AudioManager>();
+
         StartingSeconds = Seconds;
 
         //Update UI
@@ -49,6 +52,8 @@ public class ClickTest : MonoBehaviour
             //Count Clicks
             if (Input.GetMouseButtonDown(0))
             {
+                audio.Success();
+
                 Clicks++;
                 ClickText.SetText(Clicks.ToString());
             }
@@ -57,6 +62,8 @@ public class ClickTest : MonoBehaviour
 
     public void StartGame()
     {
+        audio.ButtonPress();
+
         //Initalize variables
         Clicks = 0;
         Seconds = StartingSeconds;

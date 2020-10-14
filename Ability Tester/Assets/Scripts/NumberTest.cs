@@ -23,10 +23,13 @@ public class NumberTest : MonoBehaviour
     string Answer;
     float timeStarted = 0;
     bool inPlay;
+    AudioManager audio;
 
     // Start is called before the first frame update
     void Start()
     {
+        audio = FindObjectOfType<AudioManager>();
+
         //Set high score text
         HighScoreText.SetText("High Score " + PlayerPrefs.GetInt("Number Test High Score").ToString() + " Numbers Correct");
     }
@@ -49,6 +52,8 @@ public class NumberTest : MonoBehaviour
 
     public void StartGame()
     {
+        audio.ButtonPress();
+
         //Reset score
         Score = 0;
         inPlay = true;
@@ -88,6 +93,8 @@ public class NumberTest : MonoBehaviour
         //Compare Ans
         if (input.Contains(Answer))
         {
+            audio.Success();
+
             //Update Score
             Score++;
             GameScoreText.SetText(Score.ToString());
@@ -106,6 +113,8 @@ public class NumberTest : MonoBehaviour
         else
         {
             //If Wrong
+            audio.Failure();
+
             gameOver();
         }
     }
