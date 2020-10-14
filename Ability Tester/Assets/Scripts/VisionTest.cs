@@ -20,12 +20,15 @@ public class VisionTest : MonoBehaviour
     //Declare vars
     int Score = 0;
     string Answer;
+    float StartingFontSize;
 
     // Start is called before the first frame update
     void Start()
     {
         //Set high score text
         HighScoreText.SetText("High Score " + PlayerPrefs.GetInt("Vision Test High Score").ToString() + " Letters Correct");
+
+        StartingFontSize = LetterText.fontSize;
     }
 
     private void Update()
@@ -47,6 +50,7 @@ public class VisionTest : MonoBehaviour
         GameOverCanvas.SetActive(false);
         StartCanvas.SetActive(false);
         GameScoreText.SetText(Score.ToString());
+        LetterText.fontSize = StartingFontSize;
 
         SetLetter();
     }

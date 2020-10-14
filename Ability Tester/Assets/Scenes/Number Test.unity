@@ -143,36 +143,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 96997308}
-  - component: {fileID: 96997307}
+  - component: {fileID: 96997309}
   m_Layer: 0
-  m_Name: Vision Test
+  m_Name: Number Test
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &96997307
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 96997306}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 718de2e1d545c2741966942ebd9b1cd6, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  StartCanvas: {fileID: 6149559228010753476}
-  GameCanvas: {fileID: 1879191209}
-  GameOverCanvas: {fileID: 2134198641}
-  GameScoreText: {fileID: 1970898531}
-  LetterText: {fileID: 824448148}
-  ScoreText: {fileID: 889995378}
-  HighScoreText: {fileID: 6149559228010753475}
-  NewRecordText: {fileID: 398572}
-  InputText: {fileID: 2117068614}
-  InputField: {fileID: 2117068612}
 --- !u!4 &96997308
 Transform:
   m_ObjectHideFlags: 0
@@ -185,8 +163,30 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &96997309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 96997306}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ab0fe15fbf43f94ea2be2ce21a35c96, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StartCanvas: {fileID: 6149559228010753476}
+  NumberCanvas: {fileID: 1562106718}
+  GameCanvas: {fileID: 1879191209}
+  GameOverCanvas: {fileID: 2134198641}
+  GameScoreText: {fileID: 1970898531}
+  NumberText: {fileID: 753465995}
+  ScoreText: {fileID: 889995378}
+  HighScoreText: {fileID: 6149559228010753475}
+  NewRecordText: {fileID: 398572}
+  InputField: {fileID: 2117068612}
 --- !u!1 &112552796
 GameObject:
   m_ObjectHideFlags: 0
@@ -665,7 +665,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 65357dc40d14ff44f9d90d245e09e270, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!1 &824448146
+--- !u!1 &753465993
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -673,42 +673,42 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 824448147}
-  - component: {fileID: 824448149}
-  - component: {fileID: 824448148}
+  - component: {fileID: 753465994}
+  - component: {fileID: 753465996}
+  - component: {fileID: 753465995}
   m_Layer: 5
-  m_Name: Letter
+  m_Name: Number
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &824448147
+--- !u!224 &753465994
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824448146}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_GameObject: {fileID: 753465993}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 1879191213}
-  m_RootOrder: 3
+  m_Father: {fileID: 1562106719}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
   m_AnchoredPosition: {x: 0, y: 200}
   m_SizeDelta: {x: 1920, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!114 &824448148
+--- !u!114 &753465995
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824448146}
+  m_GameObject: {fileID: 753465993}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
@@ -722,7 +722,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: A
+  m_text: 1
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 29b21923165791a4299476fa40f6d91f, type: 2}
   m_sharedMaterial: {fileID: -8173176464192590401, guid: 29b21923165791a4299476fa40f6d91f, type: 2}
@@ -757,7 +757,7 @@ MonoBehaviour:
   m_fontSizeMax: 72
   m_fontStyle: 0
   m_HorizontalAlignment: 2
-  m_VerticalAlignment: 512
+  m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
   m_wordSpacing: 0
@@ -791,13 +791,13 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
---- !u!222 &824448149
+--- !u!222 &753465996
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 824448146}
+  m_GameObject: {fileID: 753465993}
   m_CullTransparentMesh: 0
 --- !u!114 &889995378 stripped
 MonoBehaviour:
@@ -950,9 +950,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "\nGuess as many letters as you can\r\n\r\nEach time you guess correctly
-    the text shrinks\r\n\r\nAt the end, it will tell you how many letters you guessed
-    correctly \r\n\r\nThis test is meant to measure your eyesight\n"
+  m_text: "\nRemember as many numbers as you can\r\n\r\nThe number will only show
+    up for 3 seconds \r\n\r\nEach time you remember correctly the next number will
+    be increased by one place\r\n\r\nThis test is meant to measure your memory."
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 29b21923165791a4299476fa40f6d91f, type: 2}
   m_sharedMaterial: {fileID: -8173176464192590401, guid: 29b21923165791a4299476fa40f6d91f, type: 2}
@@ -1128,7 +1128,7 @@ RectTransform:
   m_Children:
   - {fileID: 459479003}
   m_Father: {fileID: 1879191213}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
@@ -1197,8 +1197,8 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 96997307}
-        m_TargetAssemblyTypeName: VisionTest, Assembly-CSharp
+      - m_Target: {fileID: 96997309}
+        m_TargetAssemblyTypeName: NumberTest, Assembly-CSharp
         m_MethodName: CheckAnswer
         m_Mode: 1
         m_Arguments:
@@ -1290,6 +1290,105 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d8f4d5a20b8afe4d9cae2cfefda45fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!1 &1562106718
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1562106719}
+  - component: {fileID: 1562106722}
+  - component: {fileID: 1562106721}
+  - component: {fileID: 1562106720}
+  m_Layer: 5
+  m_Name: Number Canvas
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 0
+--- !u!224 &1562106719
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562106718}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 0, y: 0, z: 0}
+  m_Children:
+  - {fileID: 753465994}
+  m_Father: {fileID: 0}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
+  m_Pivot: {x: 0, y: 0}
+--- !u!114 &1562106720
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562106718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc42784cf147c0c48a680349fa168899, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_IgnoreReversedGraphics: 1
+  m_BlockingObjects: 0
+  m_BlockingMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+--- !u!114 &1562106721
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562106718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0cd44c1031e13a943bb63640046fad76, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_UiScaleMode: 1
+  m_ReferencePixelsPerUnit: 100
+  m_ScaleFactor: 1
+  m_ReferenceResolution: {x: 1920, y: 1080}
+  m_ScreenMatchMode: 0
+  m_MatchWidthOrHeight: 0
+  m_PhysicalUnit: 3
+  m_FallbackScreenDPI: 96
+  m_DefaultSpriteDPI: 96
+  m_DynamicPixelsPerUnit: 1
+--- !u!223 &1562106722
+Canvas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1562106718}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_RenderMode: 0
+  m_Camera: {fileID: 0}
+  m_PlaneDistance: 100
+  m_PixelPerfect: 0
+  m_ReceivesEvents: 1
+  m_OverrideSorting: 0
+  m_OverridePixelPerfect: 0
+  m_SortingBucketNormalizedSize: 0
+  m_AdditionalShaderChannelsFlag: 25
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_TargetDisplay: 0
 --- !u!1 &1879191209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1380,10 +1479,9 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 1139888715}
   - {fileID: 1970898530}
+  - {fileID: 1139888715}
   - {fileID: 361823098}
-  - {fileID: 824448147}
   m_Father: {fileID: 0}
   m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1424,10 +1522,10 @@ RectTransform:
   m_GameObject: {fileID: 1970898529}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children: []
   m_Father: {fileID: 1879191213}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
@@ -1765,7 +1863,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5300992722287780479, guid: 859a64797cacd2945a07127474059cc0, type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 5300992722287780479, guid: 859a64797cacd2945a07127474059cc0, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1826,7 +1924,7 @@ PrefabInstance:
     - target: {fileID: 6181593287984091329, guid: 859a64797cacd2945a07127474059cc0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 96997307}
+      objectReference: {fileID: 96997309}
     - target: {fileID: 6181593287984091329, guid: 859a64797cacd2945a07127474059cc0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
@@ -1841,7 +1939,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6181593287984091329, guid: 859a64797cacd2945a07127474059cc0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: VisionTest, Assembly-CSharp
+      value: NumberTest, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6181593287984091329, guid: 859a64797cacd2945a07127474059cc0, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
@@ -2055,7 +2153,9 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6149559227848532653, guid: 4395198e2174cff4e8cd8082a1acbc73, type: 3}
       propertyPath: m_text
-      value: Vision Test
+      value: 'Number Test
+
+'
       objectReference: {fileID: 0}
     - target: {fileID: 6149559228633873753, guid: 4395198e2174cff4e8cd8082a1acbc73, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.size
@@ -2080,10 +2180,10 @@ PrefabInstance:
     - target: {fileID: 6149559228633873753, guid: 4395198e2174cff4e8cd8082a1acbc73, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
-      objectReference: {fileID: 96997307}
+      objectReference: {fileID: 96997309}
     - target: {fileID: 6149559228633873753, guid: 4395198e2174cff4e8cd8082a1acbc73, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
-      value: VisionTest, Assembly-CSharp
+      value: NumberTest, Assembly-CSharp
       objectReference: {fileID: 0}
     - target: {fileID: 6149559228633873753, guid: 4395198e2174cff4e8cd8082a1acbc73, type: 3}
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName

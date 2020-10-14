@@ -17,4 +17,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Vision Test.unity
     guid: 23dfc90de93de5c41b8450a91e0306dc
+  - enabled: 1
+    path: Assets/Scenes/Number Test.unity
+    guid: 804cefa1972337b4e82d3f8a35f3fde8
+  - enabled: 1
+    path: Assets/Scenes/Reflex Test.unity
+    guid: d07263dd3e4e8ef4fa336516cf9e7c4e
   m_configObjects: {}

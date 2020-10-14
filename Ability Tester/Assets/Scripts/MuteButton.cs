@@ -16,8 +16,10 @@ public class MuteButton : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        //Update icon on start
         UpdateIcon();
 
+        //Find audio object
         audio = FindObjectOfType<AudioManager>();
     }
 
@@ -28,6 +30,7 @@ public class MuteButton : MonoBehaviour
         {
             ButtonIcon.sprite = UnmutedIcon;
         }
+
         //If Muted
         else
         {
@@ -37,6 +40,7 @@ public class MuteButton : MonoBehaviour
 
     public void ToggleMute()
     {
+        //Play noise
         audio.ButtonPress();
 
         //Toggles Muted 0 means Unmuted, 1 means muted
@@ -48,8 +52,6 @@ public class MuteButton : MonoBehaviour
         {
             PlayerPrefs.SetInt("Muted", 0);
         }
-
-        audio.ButtonPress();
 
         UpdateIcon();
     }

@@ -5,6 +5,7 @@ using TMPro;
 
 public class ClickTest : MonoBehaviour
 {
+    //Params
     [SerializeField] GameObject StartCanvas;
     [SerializeField] GameObject GameCanvas;
     [SerializeField] GameObject GameOverCanvas;
@@ -15,17 +16,18 @@ public class ClickTest : MonoBehaviour
     [SerializeField] TextMeshProUGUI NewRecordText;
     [SerializeField] float Seconds;
 
+    //Declare vars
     float StartingSeconds;
     float timeStarted;
     bool GameInPlay = false;
     int Clicks = 0;
-    Target target;
 
     // Start is called before the first frame update
     void Start()
     {
         StartingSeconds = Seconds;
 
+        //Update UI
         HighScoreText.SetText("High Score " + PlayerPrefs.GetFloat("Click Test High Score").ToString("F1") + " Clicks Per Second");
         TimerText.SetText(StartingSeconds.ToString());
     }
@@ -34,14 +36,17 @@ public class ClickTest : MonoBehaviour
     {
         if (GameInPlay)
         {
+            //Update timer
             Seconds = 10 - (Time.time - timeStarted);
             TimerText.SetText(Seconds.ToString("0"));
 
+            //Game Over
             if (Seconds <= 0)
             {
                 gameOver();
             }
 
+            //Count Clicks
             if (Input.GetMouseButtonDown(0))
             {
                 Clicks++;
@@ -52,26 +57,34 @@ public class ClickTest : MonoBehaviour
 
     public void StartGame()
     {
+        //Initalize variables
         Clicks = 0;
         Seconds = StartingSeconds;
         timeStarted = Time.time;
-
         GameInPlay = true;
+
+        //Update Canvas
         GameCanvas.SetActive(true);
         GameOverCanvas.SetActive(false);
         StartCanvas.SetActive(false);
 
+        //Update text
         ClickText.SetText(Clicks.ToString());
     }
 
     private void gameOver()
     {
+        //Update canvas
         GameCanvas.SetActive(false);
         GameOverCanvas.SetActive(true);
 
+        //Stop game
         GameInPlay = false;
 
+        //Calculate clicks per second
         float score = Clicks / (Time.time - timeStarted);
+
+        //Check if high score
         if (score > PlayerPrefs.GetFloat("Click Test High Score", 0))
         {
             PlayerPrefs.SetFloat("Click Test High Score", score);
@@ -82,6 +95,7 @@ public class ClickTest : MonoBehaviour
             NewRecordText.SetText("");
         }
 
+        //Display score
         ScoreText.SetText(score.ToString("F1") + " Clicks Per Second");
     }
 }

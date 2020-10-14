@@ -15,6 +15,7 @@ public class MainMenu : MonoBehaviour
         scene = FindObjectOfType<SceneManagement>();
     }
 
+    //Buttons
     public void BackButton()
     {
         scene.LoadScene("Menu");
